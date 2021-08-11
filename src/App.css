@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  html,
+  body {
+    background: hsla(160, 22%, 8%, 1);
+    background: linear-gradient(0deg, hsla(160, 22%, 8%, 1) 20%, rgb(14, 44, 27) 100%);
+    background: -moz-linear-gradient(0deg, hsla(160, 22%, 8%, 1) 20%, rgb(14, 44, 27) 100%);
+    background: -webkit-linear-gradient(0deg, hsla(160, 22%, 8%, 1) 20%, rgb(14, 44, 27) 100%);
+    height: 100vh;
+    color: #fff;
+    font-family: 'Poppins', Helvetica, sans-serif;
   }
-  to {
-    transform: rotate(360deg);
+  
+  a {
+    text-decoration: none;
   }
-}
+  
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    color: #fff;
+    background-color: #3fb573;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px 15px;
+    border: 0;
+    margin: 10px 0;
+  }
+
+  /* Header */
+  
+  header {
+    height: 200px;
+  }
+  
+  header img {
+    width: 200px;
+  }
+  
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Search Bar  */
+  
+  .search {
+    height: 100px;
+  }
+  
+  input[type='text'] {
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid rgb(160, 153, 153);
+    border-radius: 2rem;
+    width: 60%;
+    margin: auto;
+    outline: none;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Poppins';
+  }
+
+  /* Layout */
+  
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .cards > * {
+    flex: 1 1 33%;
+  }
+  
+  .card {
+    margin-top: 1rem;
+    position: relative;
+    background-color: rgb(247, 244, 244);
+    color: #222;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    max-width: 35%;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-inner {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.7rem;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .card h1 {
+    font-size: 1.2rem;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.2em;
+  }
+
+  .card span {
+    padding: 0 0px;
+    box-shadow: inset 0 -10px 0 0 #3fb573;
+  }
+
+  .card img {
+    width: 10rem;
+    height: 12rem;
+    object-fit: fill;
+    border-radius: 5%;
+    box-shadow: 5px 5px #3fb573;
+  }
+
+  .card li {
+    list-style: none;
+  }
+
+  .card-back {
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 1000px) and (min-width: 701px) {
+    .card {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 700px) and (min-width: 500px) {
+    .card {
+      max-width: 70%;
+    }
+    .cards > * {
+      flex: 1 1 70%;
+    }
+    .card-inner {
+      /* flex-direction: column; */
+      text-align: left;
+    }
+    .card-back {
+      width: 45%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .card {
+      max-width: 100%;
+    }
+    .card-inner {
+      flex-direction: column;
+      font-size: 1em;
+    }
+    .card-back {
+      width: 70%;
+      text-align: center;
+    }
+  } 
+
+  /* Pagination  */
+
+  .paginationBttns {
+    width: 80%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  
+  .paginationBttns a {
+    padding: 0.5em;
+    margin: 0.3em;
+    border-radius: 8rem;
+    border: 1px solid #3fb573;
+    color: #3fb573;
+    cursor: pointer;
+  }
+  
+  .paginationBttns a:hover {
+    color: white;
+    background-color: #3fb573;
+  }
+  
+  .paginationActive a {
+    color: white;
+    background-color: #3fb573;
+  }
+  
+  .paginationDisabled a {
+    color: white;
+    background-color: #3fb573;
+    cursor: not-allowed;
+  }
