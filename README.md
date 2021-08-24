@@ -1,3 +1,14 @@
+## This is a web app that enables us to get familiar with all the characters of the popular TV Series "The Breaking Bad" and their status taking the help of an API.
+
+# Used 
+ReactJS, CSS, HTML, Node, npm
+
+# Deployed on Netlify
+https://suspicious-kirch-ea54d3.netlify.app/
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
